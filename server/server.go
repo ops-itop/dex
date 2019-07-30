@@ -26,6 +26,7 @@ import (
 	"github.com/dexidp/dex/connector/linkedin"
 	"github.com/dexidp/dex/connector/microsoft"
 	"github.com/dexidp/dex/connector/mock"
+	"github.com/dexidp/dex/connector/learn"
 	"github.com/dexidp/dex/connector/oidc"
 	"github.com/dexidp/dex/connector/saml"
 	"github.com/dexidp/dex/pkg/log"
@@ -439,6 +440,7 @@ var ConnectorsConfig = map[string]func() ConnectorConfig{
 	"keystone":        func() ConnectorConfig { return new(keystone.Config) },
 	"mockCallback":    func() ConnectorConfig { return new(mock.CallbackConfig) },
 	"mockPassword":    func() ConnectorConfig { return new(mock.PasswordConfig) },
+	"learn":           func() ConnectorConfig { return new(learn.CallbackConfig) },
 	"ldap":            func() ConnectorConfig { return new(ldap.Config) },
 	"github":          func() ConnectorConfig { return new(github.Config) },
 	"gitlab":          func() ConnectorConfig { return new(gitlab.Config) },
